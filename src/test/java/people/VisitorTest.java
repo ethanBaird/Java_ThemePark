@@ -32,16 +32,16 @@ public class VisitorTest {
     }
 
 
-    @Test
-    public void canVisitAttraction(){
-        RollerCoaster rollerCoaster = new RollerCoaster("Big Dipper", 5);
-        visitor.visitAttraction(rollerCoaster);
-        boolean actualAllowed = rollerCoaster.isAllowedTo(visitor);
-        double actualMoney = visitor.getMoney();
-        assertTrue(actualAllowed);
-        assertEquals(31.6, actualMoney, 0.0);
-
-    }
+//    @Test
+//    public void canVisitAttraction(){
+//        RollerCoaster rollerCoaster = new RollerCoaster("Big Dipper", 5);
+//        visitor.visitAttraction(rollerCoaster);
+//        boolean actualAllowed = rollerCoaster.isAllowedTo(visitor);
+//        double actualMoney = visitor.getMoney();
+//        assertTrue(actualAllowed);
+//        assertEquals(31.6, actualMoney, 0.0);
+//
+//    }
 //    @Test
 //    public void chargesDoubleForOver200Tall(){
 //        Visitor over200 = new Visitor(18,210,20);

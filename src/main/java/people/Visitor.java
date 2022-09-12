@@ -1,5 +1,8 @@
 package people;
 
+import attractions.Attraction;
+import attractions.RollerCoaster;
+
 public class Visitor {
 
     private int age;
@@ -23,4 +26,5 @@ public class Visitor {
     public double getMoney() {
         return money;
     }
+
 }

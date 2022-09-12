@@ -49,6 +49,17 @@ public class RollercoasterTest {
         assertFalse(actual);
     }
 
+    @Test
+    public void chargesDefaultPriceForUnder200Tall(){
+        Visitor under200 = new Visitor(16, 140, 20);
+        double actual = rollerCoaster.priceFor(under200);
+        assertEquals(8.40, actual, 0.0);
+    }
 
-
+    @Test
+    public void chargesDoubleForOver200Tall() {
+        Visitor over200 = new Visitor(16, 210, 20);
+        double actual = rollerCoaster.priceFor(over200);
+        assertEquals(16.80, actual, 0.0);
+    }
 }

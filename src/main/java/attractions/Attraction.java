@@ -1,6 +1,7 @@
 package attractions;
 
 import interfaces.IReview;
+import interfaces.ITicket;
 
 public abstract class Attraction implements IReview {
     private String name;
