@@ -1,6 +1,8 @@
 package attractions;
 
-public abstract class Attraction {
+import interfaces.IReview;
+
+public abstract class Attraction implements IReview {
     private String name;
     private int rating;
     private int visitCount;
