@@ -33,21 +33,21 @@ public class TobaccoStallTest {
     @Test
     public void allowsVisitorOver18() {
         Visitor over18 = new Visitor(19,10,10);
-        boolean actual = tobaccoStall.isAllowedTo(over18);
+        boolean actual = tobaccoStall.isAllowedFor(over18);
         assertTrue(actual);
     }
 
     @Test
     public void doesNotAllowVisitorUnder18() {
         Visitor under18 = new Visitor(17,10,10);
-        boolean actual = tobaccoStall.isAllowedTo(under18);
+        boolean actual = tobaccoStall.isAllowedFor(under18);
         assertFalse(actual);
     }
 
     @Test
     public void allowsVisitorExactly18(){
         Visitor exactly18 = new Visitor(18,10,10);
-        boolean actual = tobaccoStall.isAllowedTo(exactly18);
+        boolean actual = tobaccoStall.isAllowedFor(exactly18);
         assertTrue(actual);
     }
 }

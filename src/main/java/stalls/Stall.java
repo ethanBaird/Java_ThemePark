@@ -1,8 +1,10 @@
 package stalls;
 
 import interfaces.IReview;
+import interfaces.ISecure;
+import people.Visitor;
 
-public abstract class Stall implements IReview {
+public abstract class Stall implements IReview, ISecure {
 
     private String name;
     private int rating;
@@ -30,5 +32,9 @@ public abstract class Stall implements IReview {
 
     public ParkingSpot getParkingSpot() {
         return parkingSpot;
+    }
+
+    public boolean isAllowedFor(Visitor visitor){
+        return true;
     }
 }

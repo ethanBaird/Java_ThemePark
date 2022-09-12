@@ -32,21 +32,21 @@ public class PlaygroundTest {
     @Test
     public void allowsVisitorOver15(){
         Visitor oldVisitor = new Visitor(16, 10, 20);
-        boolean actual = playground.isAllowedTo(oldVisitor);
+        boolean actual = playground.isAllowedFor(oldVisitor);
         assertTrue(actual);
     }
 
     @Test
     public void wontAllowVisitorUnder15() {
         Visitor youngVisitor = new Visitor(14,9,10);
-        boolean actual = playground.isAllowedTo(youngVisitor);
+        boolean actual = playground.isAllowedFor(youngVisitor);
         assertFalse(actual);
     }
 
     @Test
     public void allowsVisitorExactlyFifteen() {
         Visitor fifteenVisitor = new Visitor(15,10,20);
-        boolean actual = playground.isAllowedTo(fifteenVisitor);
+        boolean actual = playground.isAllowedFor(fifteenVisitor);
         assertTrue(actual);
     }
 }

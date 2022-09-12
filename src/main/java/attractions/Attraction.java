@@ -1,9 +1,11 @@
 package attractions;
 
 import interfaces.IReview;
+import interfaces.ISecure;
 import interfaces.ITicket;
+import people.Visitor;
 
-public abstract class Attraction implements IReview {
+public abstract class Attraction implements IReview, ISecure {
     private String name;
     private int rating;
     private int visitCount;
@@ -28,5 +30,9 @@ public abstract class Attraction implements IReview {
 
     public void setVisitCount(int i) {
         this.visitCount = i;
+    }
+
+    public boolean isAllowedFor(Visitor visitor){
+        return true;
     }
 }

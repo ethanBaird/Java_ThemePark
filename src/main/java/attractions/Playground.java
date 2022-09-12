@@ -3,7 +3,7 @@ package attractions;
 import interfaces.ISecure;
 import people.Visitor;
 
-public class Playground extends Attraction implements ISecure {
+public class Playground extends Attraction{
 
     public Playground(String name, int rating) {
         super(name, rating);
@@ -11,7 +11,7 @@ public class Playground extends Attraction implements ISecure {
 
 
     @Override
-    public boolean isAllowedTo(Visitor visitor) {
+    public boolean isAllowedFor(Visitor visitor) {
         return (visitor.getAge() >= 15);
     }
 }

@@ -10,7 +10,7 @@ public class TobaccoStall extends Stall implements ISecure {
     }
 
     @Override
-    public boolean isAllowedTo(Visitor visitor) {
+    public boolean isAllowedFor(Visitor visitor) {
         return visitor.getAge() >= 18;
     }
 }

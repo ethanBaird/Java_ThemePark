@@ -4,14 +4,14 @@ import interfaces.ISecure;
 import interfaces.ITicket;
 import people.Visitor;
 
-public class RollerCoaster  extends Attraction implements ISecure, ITicket {
+public class RollerCoaster  extends Attraction implements ITicket {
 
     public RollerCoaster(String name, int rating) {
         super(name, rating);
     }
 
     @Override
-    public boolean isAllowedTo(Visitor visitor) {
+    public boolean isAllowedFor(Visitor visitor) {
         return visitor.getHeight() >= 145 && visitor.getAge() >= 12;
     }
 
