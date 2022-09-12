@@ -47,6 +47,7 @@ public class TobaccoStallTest {
     @Test
     public void allowsVisitorExactly18(){
         Visitor exactly18 = new Visitor(18,10,10);
-        actual = tobaccoStall.isAllowedTo(exactly18)
+        boolean actual = tobaccoStall.isAllowedTo(exactly18);
+        assertTrue(actual);
     }
 }
