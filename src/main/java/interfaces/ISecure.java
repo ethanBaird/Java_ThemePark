@@ -1,6 +1,8 @@
+package interfaces;
+
 import people.Visitor;
 
-public interface ISecurity {
+public interface ISecure {
 
     public boolean isAllowedTo(Visitor visitor);
 }
