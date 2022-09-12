@@ -37,14 +37,14 @@ public class RollercoasterTest {
         assertTrue(actual);
     }
     @Test
-    public void doesNotAllowVisitorUnder145() {
-        Visitor over145under12 = new Visitor(13,146, 20);
+    public void doesNotAllowVisitorUnder12() {
+        Visitor over145under12 = new Visitor(11,146, 20);
         boolean actual = rollerCoaster.isAllowedTo(over145under12);
         assertFalse(actual);
     }
     @Test
-    public void doesNotAllowVisitorUnder145AndOver12() {
-        Visitor under145over12 = new Visitor(13,146, 20);
+    public void doesNotAllowVisitorUnder145() {
+        Visitor under145over12 = new Visitor(13,144, 20);
         boolean actual = rollerCoaster.isAllowedTo(under145over12);
         assertFalse(actual);
     }
